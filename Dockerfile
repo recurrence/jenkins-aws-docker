@@ -10,7 +10,7 @@ RUN rm awscli-bundle.zip
 RUN mkdir /var/jenkins_home/.aws
 
 # Setup Docker
-RUN groupadd --gid 999 docker
+RUN groupadd --gid 497 docker
 RUN apt-get -y update
 RUN apt-get -y install docker
 RUN usermod -aG docker jenkins
