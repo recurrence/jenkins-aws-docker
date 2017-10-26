@@ -14,7 +14,7 @@ RUN groupadd --gid 497 docker
 RUN apt-get -y update
 RUN apt-get -y install docker
 RUN usermod -aG docker jenkins
-VOLUME /var/run/docker.sock
+#VOLUME /var/run/docker.sock
 
 # Misc extra packages
 RUN apt-get -y install jq
