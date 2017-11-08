@@ -13,6 +13,7 @@ RUN mkdir /var/jenkins_home/.aws
 RUN groupadd --gid 497 docker
 RUN apt-get -y update
 RUN apt-get -y install docker
+RUN apt-get install -y libltdl7
 RUN usermod -aG docker jenkins
 #VOLUME /var/run/docker.sock
 
