@@ -22,5 +22,11 @@ RUN usermod -aG docker jenkins
 # Misc extra packages
 RUN apt-get -y install jq
 
-USER jenkins
+# Setup Postgres
+#RUN /etc/init.d/postgresql start
+#USER postgres
+#RUN sleep 3
+#RUN psql -c "CREATE USER jenkins;"
+#RUN psql -c "ALTER USER jenkins WITH SUPERUSER;"
 
+USER jenkins
